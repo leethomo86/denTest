@@ -1,0 +1,38 @@
+#
+# Density Test ROBODoc control file 
+# 
+# L. M. Thompson 04/22/22
+#
+options:
+    --src . 
+    --doc ./doc/denTest
+    --singledoc 
+#    --html
+#    --latex
+#    --rtf
+    --ascii
+    --documenttitle "Density Test"
+    --tabsize 8
+items:
+    SYNOPSIS
+    NAME
+    COPYRIGHT
+    USAGE
+    AUTHOR
+    OPTIONS
+    NOTES
+headertypes:
+    x  "Main Program"  main 
+header markers:
+    !****
+end markers:
+    !****
+remark begin markers:
+    !*
+remark end markers:
+    !*
+remark markers:
+    !*
+source line comments:
+    !
+

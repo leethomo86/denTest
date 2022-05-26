@@ -1,0 +1,32 @@
+Main/denTest
+
+NAME
+      Density Test
+SYNOPSIS
+      Determine symmetry of a density matrix stored on a matrix file.
+USAGE
+      guessGen [-f <Matrix_file>] 
+OPTIONS
+      -f matrix_file                   Input matrix file containing density.
+
+NOTES
+      Compilation of this program requires the MQC library (https://github.com/MQCPack/mqcPack) 
+      and the gauopen utility (http://gaussian.com/g16/gauopen.zip) and compilation with the f08
+      standard. 
+
+      Compilation tested using: pgfortran, gfortran. e.g.
+        gfortran -fdefault-integer-8 -fdefault-real-8 -std=f2008 -I/path/to/mqc/src -o guessGen.exe
+        /path/to/mqc/src/*.o guessGen.f03 -llapack -lblas /path/to/mqc/src/libmqc.a
+      
+      Note that subroutine Wr_LCBuf needs modifying in gauopen/qcmatrix.F as follows:
+        line 58:       LenBX = (LenBuf/(2*abs(NR)))*abs(NR)
+        line 60:       Call Wr_CBuf(IU,NTot*abs(NR),LenBX,X)
+
+      Documentation generated with robodoc. To update documentation edit robodoc.rc to determine
+      documentation output type and then run robodoc at the command line in the guessGen directory.
+AUTHOR
+      Lee Thompson, University of Louisville, lee.thompson.1@lousiville.edu
+COPYRIGHT
+      (c) 2022 by Lee Thompson distributed under terms of the MIT license.
+
+---------------------------------------------------------------------------

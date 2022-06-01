@@ -5,9 +5,19 @@ NAME
 SYNOPSIS
       Determine symmetry of a density matrix stored on a matrix file.
 USAGE
-      guessGen [-f <Matrix_file>] 
+      denTest [-f <Matrix_file>] [--distance <matrix_file>] [--print-level <print_level>] 
+              [--help]
 OPTIONS
       -f matrix_file                   Input matrix file containing density.
+
+      --distance matrix_file           Additional matrix file containing MO coefficients
+                                       and/or density from which distance of first matrix
+                                       file will be computed.
+
+      --print-level print_level        Output print level value from 0 (minimum) to 3 
+                                       (maximum). Default is 0.
+
+      --help                           Output help documentation to terminal. 
 
 NOTES
       Compilation of this program requires the MQC library (https://github.com/MQCPack/mqcPack) 
